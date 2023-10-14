@@ -38,7 +38,13 @@ extension ChooseImgVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellImg", for: indexPath) as! cellImg
+        let vc = ImageDetailVC()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.bindingData(dataSource: lstImg, atIndex: indexPath.row)
+        self.present(vc, animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }

@@ -11,6 +11,9 @@ class ImageCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var ivItem: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    override func prepareForReuse() {
+        self.ivItem.image = nil
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         scrollView.delegate = self
@@ -19,8 +22,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
     }
-    func bindingUI() {
-        
+    func bindingUI(image: UIImage) {
+        self.ivItem.image = image
     }
 }
 extension ImageCollectionViewCell: UIScrollViewDelegate {
