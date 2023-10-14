@@ -66,7 +66,7 @@ extension ImageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource,UI
             return smallImage
         } else {
             let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollectionViewCell
-            imageCell.bindingUI(image: dataSource[atIndex ?? 0])
+            imageCell.bindingUI(image: dataSource[indexPath.row])
             imageCell.ivItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toShowAndHide)))
             return imageCell
         }
