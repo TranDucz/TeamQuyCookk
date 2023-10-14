@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mj7-AY-kdd">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-nI-ZS3">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
@@ -27,10 +27,10 @@
                                             <constraint firstAttribute="height" constant="51" id="0Tu-8k-lDd"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cbg-OP-QJs">
-                                        <rect key="frame" x="0.0" y="51" width="393" height="677"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cbg-OP-QJs">
+                                        <rect key="frame" x="0.0" y="51" width="393" height="742"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wa1-aH-DID">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wa1-aH-DID">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -56,10 +56,13 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Mj7-AY-kdd" secondAttribute="trailing" id="BtP-9M-gkF"/>
                             <constraint firstItem="Mj7-AY-kdd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ODc-12-3LO"/>
-                            <constraint firstItem="Mj7-AY-kdd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="65" id="TjJ-er-FP2"/>
+                            <constraint firstItem="Mj7-AY-kdd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TjJ-er-FP2"/>
                             <constraint firstAttribute="bottom" secondItem="Mj7-AY-kdd" secondAttribute="bottom" id="cOw-JH-vrS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Cbg-OP-QJs" id="CLP-M2-7tJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

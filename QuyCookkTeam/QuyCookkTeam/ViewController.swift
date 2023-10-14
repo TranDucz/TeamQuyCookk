@@ -25,7 +25,8 @@ class ViewController: UIViewController {
         
         let storyBoard = UIStoryboard(name: "ChooseImgVC", bundle:Bundle.main)
         let vc = storyBoard.instantiateViewController(withIdentifier: "ChooseImgVC") as! ChooseImgVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.lstImg = images
+        self.navigationController?.present(vc, animated: true)
     }
     
     func getAllImg() {
@@ -51,9 +52,6 @@ class ViewController: UIViewController {
                             options.isSynchronous = true
                             
                             imageManager.requestImage(for: obj, targetSize: CGSize(width: obj.pixelWidth, height: obj.pixelHeight), contentMode: .aspectFill, options: options, resultHandler: { img, info in
-                                if self.images.count > 100 {
-                                    return
-                                }
                                 self.images.append(img!)
                             })
                         }

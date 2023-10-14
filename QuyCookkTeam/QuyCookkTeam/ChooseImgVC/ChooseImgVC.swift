@@ -9,21 +9,52 @@ import UIKit
 
 class ChooseImgVC: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    var lstImg:[UIImage] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupCollectionView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupCollectionView() {
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.collectionView.register(UINib(nibName:"cellImg", bundle: nil), forCellWithReuseIdentifier: "cellImg")
     }
-    */
 
+
+}
+
+extension ChooseImgVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return lstImg.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellImg", for: indexPath) as! cellImg
+        cell.bindingData(img: lstImg[indexPath.row])
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding = CGFloat(3 + 1) * 2
+        let a = collectionView.frame.width
+        let availabelWith = a - padding
+        let size = availabelWith / 3
+        
+        return CGSize(width: size, height: size)
+    }
+    
+    
 }

@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="164" height="160"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P3J-53-hRz">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P3J-53-hRz">
                         <rect key="frame" x="0.0" y="0.0" width="164" height="160"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-2l-Fnf">
@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sb-qW-WsT">
                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="selectAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="G7Q-w5-Qab"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,6 +54,9 @@
                 <constraint firstAttribute="trailing" secondItem="P3J-53-hRz" secondAttribute="trailing" id="nVE-Qf-inG"/>
             </constraints>
             <size key="customSize" width="164" height="160"/>
+            <connections>
+                <outlet property="vImg" destination="P3J-53-hRz" id="sR9-cq-6dO"/>
+            </connections>
             <point key="canvasLocation" x="0.0" y="-9.1549295774647899"/>
         </collectionViewCell>
     </objects>
