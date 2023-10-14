@@ -13,6 +13,11 @@
 		3A46AC4A2ADA342D000B1086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC482ADA342D000B1086 /* Main.storyboard */; };
 		3A46AC4C2ADA342E000B1086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC4B2ADA342E000B1086 /* Assets.xcassets */; };
 		3A46AC4F2ADA342E000B1086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC4D2ADA342E000B1086 /* LaunchScreen.storyboard */; };
+		9944D7C32ADA374B00CCA7A1 /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944D7C22ADA374B00CCA7A1 /* ScrollViewExtension.swift */; };
+		9944D7C72ADA3BFC00CCA7A1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944D7C52ADA3BFC00CCA7A1 /* ImageCollectionViewCell.swift */; };
+		9944D7C82ADA3BFC00CCA7A1 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9944D7C62ADA3BFC00CCA7A1 /* ImageCollectionViewCell.xib */; };
+		9944D7CC2ADA435F00CCA7A1 /* ImageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944D7CA2ADA435F00CCA7A1 /* ImageDetailVC.swift */; };
+		9944D7CD2ADA435F00CCA7A1 /* ImageDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9944D7CB2ADA435F00CCA7A1 /* ImageDetailVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3A46AC4B2ADA342E000B1086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A46AC4E2ADA342E000B1086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A46AC502ADA342E000B1086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9944D7C22ADA374B00CCA7A1 /* ScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExtension.swift; sourceTree = "<group>"; };
+		9944D7C52ADA3BFC00CCA7A1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		9944D7C62ADA3BFC00CCA7A1 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		9944D7CA2ADA435F00CCA7A1 /* ImageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailVC.swift; sourceTree = "<group>"; };
+		9944D7CB2ADA435F00CCA7A1 /* ImageDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		3A46AC412ADA342D000B1086 /* QuyCookkTeam */ = {
 			isa = PBXGroup;
 			children = (
+				9944D7BC2ADA36A100CCA7A1 /* ImageDetailViewController */,
 				3A46AC422ADA342D000B1086 /* AppDelegate.swift */,
 				3A46AC442ADA342D000B1086 /* SceneDelegate.swift */,
 				3A46AC462ADA342D000B1086 /* ViewController.swift */,
@@ -65,6 +76,34 @@
 				3A46AC502ADA342E000B1086 /* Info.plist */,
 			);
 			path = QuyCookkTeam;
+			sourceTree = "<group>";
+		};
+		9944D7BC2ADA36A100CCA7A1 /* ImageDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9944D7CA2ADA435F00CCA7A1 /* ImageDetailVC.swift */,
+				9944D7CB2ADA435F00CCA7A1 /* ImageDetailVC.xib */,
+				9944D7C12ADA373500CCA7A1 /* ZoomFramework */,
+			);
+			path = ImageDetailViewController;
+			sourceTree = "<group>";
+		};
+		9944D7C12ADA373500CCA7A1 /* ZoomFramework */ = {
+			isa = PBXGroup;
+			children = (
+				9944D7C22ADA374B00CCA7A1 /* ScrollViewExtension.swift */,
+				9944D7C42ADA3BCF00CCA7A1 /* Cell */,
+			);
+			path = ZoomFramework;
+			sourceTree = "<group>";
+		};
+		9944D7C42ADA3BCF00CCA7A1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9944D7C52ADA3BFC00CCA7A1 /* ImageCollectionViewCell.swift */,
+				9944D7C62ADA3BFC00CCA7A1 /* ImageCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +166,9 @@
 			files = (
 				3A46AC4F2ADA342E000B1086 /* LaunchScreen.storyboard in Resources */,
 				3A46AC4C2ADA342E000B1086 /* Assets.xcassets in Resources */,
+				9944D7CD2ADA435F00CCA7A1 /* ImageDetailVC.xib in Resources */,
 				3A46AC4A2ADA342D000B1086 /* Main.storyboard in Resources */,
+				9944D7C82ADA3BFC00CCA7A1 /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9944D7C72ADA3BFC00CCA7A1 /* ImageCollectionViewCell.swift in Sources */,
+				9944D7C32ADA374B00CCA7A1 /* ScrollViewExtension.swift in Sources */,
+				9944D7CC2ADA435F00CCA7A1 /* ImageDetailVC.swift in Sources */,
 				3A46AC472ADA342D000B1086 /* ViewController.swift in Sources */,
 				3A46AC432ADA342D000B1086 /* AppDelegate.swift in Sources */,
 				3A46AC452ADA342D000B1086 /* SceneDelegate.swift in Sources */,
@@ -287,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMBR234FH9;
+				DEVELOPMENT_TEAM = V7CA33Z44U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuyCookkTeam/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMBR234FH9;
+				DEVELOPMENT_TEAM = V7CA33Z44U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuyCookkTeam/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
