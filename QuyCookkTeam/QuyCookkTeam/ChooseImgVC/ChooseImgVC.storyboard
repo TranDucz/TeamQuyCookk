@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choose ImgVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ChooseImgVC" id="Y6W-OH-hqX" customClass="ChooseImgVC" customModule="QuyCookkTeam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mj7-AY-kdd">
+                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-nI-ZS3">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="0Tu-8k-lDd"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cbg-OP-QJs">
+                                        <rect key="frame" x="0.0" y="51" width="393" height="677"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wa1-aH-DID">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Cbg-OP-QJs" firstAttribute="leading" secondItem="Mj7-AY-kdd" secondAttribute="leading" id="Itp-Cy-WTg"/>
+                                    <constraint firstItem="iXz-nI-ZS3" firstAttribute="leading" secondItem="Mj7-AY-kdd" secondAttribute="leading" id="PWC-FZ-Dil"/>
+                                    <constraint firstItem="Cbg-OP-QJs" firstAttribute="top" secondItem="iXz-nI-ZS3" secondAttribute="bottom" id="Ssv-gu-esC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cbg-OP-QJs" secondAttribute="bottom" id="ZXt-5m-n7s"/>
+                                    <constraint firstItem="iXz-nI-ZS3" firstAttribute="top" secondItem="Mj7-AY-kdd" secondAttribute="top" id="ci2-7r-Hog"/>
+                                    <constraint firstAttribute="trailing" secondItem="iXz-nI-ZS3" secondAttribute="trailing" id="iGR-3k-Kag"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cbg-OP-QJs" secondAttribute="trailing" id="pFB-Th-ZKD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Mj7-AY-kdd" secondAttribute="trailing" id="BtP-9M-gkF"/>
+                            <constraint firstItem="Mj7-AY-kdd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ODc-12-3LO"/>
+                            <constraint firstItem="Mj7-AY-kdd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="65" id="TjJ-er-FP2"/>
+                            <constraint firstAttribute="bottom" secondItem="Mj7-AY-kdd" secondAttribute="bottom" id="cOw-JH-vrS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74.045801526717554" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

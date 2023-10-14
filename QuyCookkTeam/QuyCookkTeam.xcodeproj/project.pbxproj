@@ -13,6 +13,10 @@
 		3A46AC4A2ADA342D000B1086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC482ADA342D000B1086 /* Main.storyboard */; };
 		3A46AC4C2ADA342E000B1086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC4B2ADA342E000B1086 /* Assets.xcassets */; };
 		3A46AC4F2ADA342E000B1086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC4D2ADA342E000B1086 /* LaunchScreen.storyboard */; };
+		3A46AC582ADA3990000B1086 /* ChooseImgVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC572ADA3990000B1086 /* ChooseImgVC.storyboard */; };
+		3A46AC5A2ADA39A5000B1086 /* ChooseImgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46AC592ADA39A5000B1086 /* ChooseImgVC.swift */; };
+		3A46AC5E2ADA3A8E000B1086 /* cellImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46AC5C2ADA3A8E000B1086 /* cellImg.swift */; };
+		3A46AC5F2ADA3A8E000B1086 /* cellImg.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC5D2ADA3A8E000B1086 /* cellImg.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3A46AC4B2ADA342E000B1086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A46AC4E2ADA342E000B1086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A46AC502ADA342E000B1086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A46AC572ADA3990000B1086 /* ChooseImgVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseImgVC.storyboard; sourceTree = "<group>"; };
+		3A46AC592ADA39A5000B1086 /* ChooseImgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseImgVC.swift; sourceTree = "<group>"; };
+		3A46AC5C2ADA3A8E000B1086 /* cellImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellImg.swift; sourceTree = "<group>"; };
+		3A46AC5D2ADA3A8E000B1086 /* cellImg.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellImg.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		3A46AC412ADA342D000B1086 /* QuyCookkTeam */ = {
 			isa = PBXGroup;
 			children = (
+				3A46AC562ADA3965000B1086 /* ChooseImgVC */,
 				3A46AC422ADA342D000B1086 /* AppDelegate.swift */,
 				3A46AC442ADA342D000B1086 /* SceneDelegate.swift */,
 				3A46AC462ADA342D000B1086 /* ViewController.swift */,
@@ -65,6 +74,25 @@
 				3A46AC502ADA342E000B1086 /* Info.plist */,
 			);
 			path = QuyCookkTeam;
+			sourceTree = "<group>";
+		};
+		3A46AC562ADA3965000B1086 /* ChooseImgVC */ = {
+			isa = PBXGroup;
+			children = (
+				3A46AC5B2ADA3A58000B1086 /* CollectionViewCell */,
+				3A46AC572ADA3990000B1086 /* ChooseImgVC.storyboard */,
+				3A46AC592ADA39A5000B1086 /* ChooseImgVC.swift */,
+			);
+			path = ChooseImgVC;
+			sourceTree = "<group>";
+		};
+		3A46AC5B2ADA3A58000B1086 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A46AC5C2ADA3A8E000B1086 /* cellImg.swift */,
+				3A46AC5D2ADA3A8E000B1086 /* cellImg.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A46AC5F2ADA3A8E000B1086 /* cellImg.xib in Resources */,
+				3A46AC582ADA3990000B1086 /* ChooseImgVC.storyboard in Resources */,
 				3A46AC4F2ADA342E000B1086 /* LaunchScreen.storyboard in Resources */,
 				3A46AC4C2ADA342E000B1086 /* Assets.xcassets in Resources */,
 				3A46AC4A2ADA342D000B1086 /* Main.storyboard in Resources */,
@@ -140,7 +170,9 @@
 			files = (
 				3A46AC472ADA342D000B1086 /* ViewController.swift in Sources */,
 				3A46AC432ADA342D000B1086 /* AppDelegate.swift in Sources */,
+				3A46AC5E2ADA3A8E000B1086 /* cellImg.swift in Sources */,
 				3A46AC452ADA342D000B1086 /* SceneDelegate.swift in Sources */,
+				3A46AC5A2ADA39A5000B1086 /* ChooseImgVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -270,6 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -287,9 +321,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMBR234FH9;
+				DEVELOPMENT_TEAM = QVEQ57W733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuyCookkTeam/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = VNPAY.QuyCookkTeam;
+				PRODUCT_BUNDLE_IDENTIFIER = VNPAY.QuyCookkTeam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,9 +351,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMBR234FH9;
+				DEVELOPMENT_TEAM = QVEQ57W733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuyCookkTeam/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +366,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = VNPAY.QuyCookkTeam;
+				PRODUCT_BUNDLE_IDENTIFIER = VNPAY.QuyCookkTeam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
