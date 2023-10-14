@@ -22,55 +22,53 @@ class ViewController: UIViewController {
     
     
     @IBAction func chooseImgAction(_ sender: Any) {
+        
         let storyBoard = UIStoryboard(name: "ChooseImgVC", bundle:Bundle.main)
         let vc = storyBoard.instantiateViewController(withIdentifier: "ChooseImgVC") as! ChooseImgVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    fileprivate func getPhotos() {
-        
-        let manager = PHImageManager.default()
-        let requestOptions = PHImageRequestOptions()
-        requestOptions.isSynchronous = false
-//        requestOptions.deliveryMode = .highQualityFormat
-        // .highQualityFormat will return better quality photos
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-        DispatchQueue.main.async {
-            let results: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-            if results.count > 0 {
-                for i in 0..<results.count {
-                    let asset = results.object(at: i)
-                    let size = CGSize(width: 700, height: 700)
-                    manager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { (image, _) in
-                        if let image = image {
-                            self.images.append(image)
-                        } else {
-                            print("error asset to image")
-                        }
-                    }
-                }
-            } else {
-                print("no photos to display")
-            }
-        }
-        
-        
-    }
-    func allImg() {
-
-    }
-    
     func getAllImg() {
         let options = PHFetchOptions()
-        options.includeHiddenAssets = false
-        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)] // Newest first
-        options.predicate = NSPredicate(format: "mediaType = \(PHAssetMediaType.image.rawValue)") // Only images
-
-        DispatchQueue.main.async {
-            self.mediaAssets = PHAsset.fetchAssets(with: options)
-            
+        let userAlbums = PHAssetCollection.fetchAssetCollections(with: PHAssetCollectionType.album, subtype: PHAssetCollectionSubtype.any, options: options)
+        
+        let albumName = userAlbums.firstObject?.localizedTitle
+        let fetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: nil)
+        let imageManager = PHCachingImageManager()
+        for i in 0..<fetchResult.count {
+            let album = fetchResult[i]
+            if album.localizedTitle == albumName {
+                // You've found the album with the specified name
+                let albumIdentifier = album.localIdentifier
+                print("Album Identifier: \(albumIdentifier)")
+                fetchResult.enumerateObjects { (collection, index, stop) in
+                    if collection.localIdentifier == albumIdentifier {
+                        let userPhotos = PHAsset.fetchAssets(in: collection, options: nil)
+                        userPhotos.enumerateObjects { nObjc, _, _ in
+                            let obj:PHAsset = nObjc as! PHAsset
+                            let options = PHImageRequestOptions()
+                            options.deliveryMode = .fastFormat
+                            options.isSynchronous = true
+                            
+                            imageManager.requestImage(for: obj, targetSize: CGSize(width: obj.pixelWidth, height: obj.pixelHeight), contentMode: .aspectFill, options: options, resultHandler: { img, info in
+                                if self.images.count > 100 {
+                                    return
+                                }
+                                self.images.append(img!)
+                            })
+                        }
+                        
+                        
+                        
+                        print("UserPhotos = \(userPhotos)")
+                        stop.pointee = true
+                    }
+                }
+                print("Album = \(album)")
+                break
+            }
         }
+    
     }
     
     func requestPhotoLibraryAccess() {
@@ -83,7 +81,8 @@ class ViewController: UIViewController {
             assets.enumerateObjects { object, _, _ in
                 print(object)
             }
-           getPhotos()
+
+            self.getAllImg()
         case .denied, .restricted:
             
                 let alert = UIAlertController(
