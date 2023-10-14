@@ -48,7 +48,7 @@ class ViewController: UIViewController {
                         userPhotos.enumerateObjects { nObjc, _, _ in
                             let obj:PHAsset = nObjc as! PHAsset
                             let options = PHImageRequestOptions()
-                            options.deliveryMode = .fastFormat
+                            options.deliveryMode = .highQualityFormat
                             options.isSynchronous = true
                             
                             imageManager.requestImage(for: obj, targetSize: CGSize(width: obj.pixelWidth, height: obj.pixelHeight), contentMode: .aspectFill, options: options, resultHandler: { img, info in

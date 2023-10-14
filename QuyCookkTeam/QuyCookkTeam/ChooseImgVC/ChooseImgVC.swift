@@ -11,6 +11,7 @@ class ChooseImgVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var lstImg:[UIImage] = []
+    var lstSelected:[IndexPath] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +36,15 @@ extension ChooseImgVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellImg", for: indexPath) as! cellImg
         cell.bindingData(img: lstImg[indexPath.row])
-        
+        cell.onClickSelect = {
+            if self.lstSelected.contains(where: { $0 == indexPath }) {
+                self.lstSelected = self.lstSelected.filter({ $0 != indexPath })
+            } else {
+                self.lstSelected.append(indexPath)
+            }
+            cell.lstSelected = self.lstSelected
+            cell.indexPath = indexPath
+        }
         return cell
     }
     
