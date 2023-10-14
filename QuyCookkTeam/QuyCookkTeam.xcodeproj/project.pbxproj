@@ -17,6 +17,11 @@
 		3A46AC5A2ADA39A5000B1086 /* ChooseImgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46AC592ADA39A5000B1086 /* ChooseImgVC.swift */; };
 		3A46AC5E2ADA3A8E000B1086 /* cellImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46AC5C2ADA3A8E000B1086 /* cellImg.swift */; };
 		3A46AC5F2ADA3A8E000B1086 /* cellImg.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A46AC5D2ADA3A8E000B1086 /* cellImg.xib */; };
+		998F584F2ADA4E75001D02C4 /* ImageDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998F58482ADA4E75001D02C4 /* ImageDetailVC.xib */; };
+		998F58502ADA4E75001D02C4 /* ImageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F58492ADA4E75001D02C4 /* ImageDetailVC.swift */; };
+		998F58512ADA4E75001D02C4 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998F584B2ADA4E75001D02C4 /* ImageCollectionViewCell.xib */; };
+		998F58522ADA4E75001D02C4 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F584C2ADA4E75001D02C4 /* ImageCollectionViewCell.swift */; };
+		998F58532ADA4E75001D02C4 /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F584E2ADA4E75001D02C4 /* ScrollViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		3A46AC592ADA39A5000B1086 /* ChooseImgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseImgVC.swift; sourceTree = "<group>"; };
 		3A46AC5C2ADA3A8E000B1086 /* cellImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellImg.swift; sourceTree = "<group>"; };
 		3A46AC5D2ADA3A8E000B1086 /* cellImg.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellImg.xib; sourceTree = "<group>"; };
+		998F58482ADA4E75001D02C4 /* ImageDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailVC.xib; sourceTree = "<group>"; };
+		998F58492ADA4E75001D02C4 /* ImageDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailVC.swift; sourceTree = "<group>"; };
+		998F584B2ADA4E75001D02C4 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		998F584C2ADA4E75001D02C4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		998F584E2ADA4E75001D02C4 /* ScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,7 @@
 		3A46AC412ADA342D000B1086 /* QuyCookkTeam */ = {
 			isa = PBXGroup;
 			children = (
+				998F58472ADA4E75001D02C4 /* ImageDetailViewController */,
 				3A46AC562ADA3965000B1086 /* ChooseImgVC */,
 				3A46AC422ADA342D000B1086 /* AppDelegate.swift */,
 				3A46AC442ADA342D000B1086 /* SceneDelegate.swift */,
@@ -93,6 +104,34 @@
 				3A46AC5D2ADA3A8E000B1086 /* cellImg.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		998F58472ADA4E75001D02C4 /* ImageDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				998F58482ADA4E75001D02C4 /* ImageDetailVC.xib */,
+				998F58492ADA4E75001D02C4 /* ImageDetailVC.swift */,
+				998F584A2ADA4E75001D02C4 /* Cell */,
+				998F584D2ADA4E75001D02C4 /* ZoomFramework */,
+			);
+			path = ImageDetailViewController;
+			sourceTree = "<group>";
+		};
+		998F584A2ADA4E75001D02C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				998F584B2ADA4E75001D02C4 /* ImageCollectionViewCell.xib */,
+				998F584C2ADA4E75001D02C4 /* ImageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		998F584D2ADA4E75001D02C4 /* ZoomFramework */ = {
+			isa = PBXGroup;
+			children = (
+				998F584E2ADA4E75001D02C4 /* ScrollViewExtension.swift */,
+			);
+			path = ZoomFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +195,8 @@
 				3A46AC5F2ADA3A8E000B1086 /* cellImg.xib in Resources */,
 				3A46AC582ADA3990000B1086 /* ChooseImgVC.storyboard in Resources */,
 				3A46AC4F2ADA342E000B1086 /* LaunchScreen.storyboard in Resources */,
+				998F58512ADA4E75001D02C4 /* ImageCollectionViewCell.xib in Resources */,
+				998F584F2ADA4E75001D02C4 /* ImageDetailVC.xib in Resources */,
 				3A46AC4C2ADA342E000B1086 /* Assets.xcassets in Resources */,
 				3A46AC4A2ADA342D000B1086 /* Main.storyboard in Resources */,
 			);
@@ -171,6 +212,9 @@
 				3A46AC472ADA342D000B1086 /* ViewController.swift in Sources */,
 				3A46AC432ADA342D000B1086 /* AppDelegate.swift in Sources */,
 				3A46AC5E2ADA3A8E000B1086 /* cellImg.swift in Sources */,
+				998F58532ADA4E75001D02C4 /* ScrollViewExtension.swift in Sources */,
+				998F58522ADA4E75001D02C4 /* ImageCollectionViewCell.swift in Sources */,
+				998F58502ADA4E75001D02C4 /* ImageDetailVC.swift in Sources */,
 				3A46AC452ADA342D000B1086 /* SceneDelegate.swift in Sources */,
 				3A46AC5A2ADA39A5000B1086 /* ChooseImgVC.swift in Sources */,
 			);
@@ -249,7 +293,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -304,7 +348,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -321,10 +365,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVEQ57W733;
+				DEVELOPMENT_TEAM = V7CA33Z44U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuyCookkTeam/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Alolo;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required for xyz benefits for you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required for xyz benefits for you";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Application needs to access photos library to save images suggest boarding pass, promotion.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -351,10 +399,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVEQ57W733;
+				DEVELOPMENT_TEAM = V7CA33Z44U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuyCookkTeam/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Yêu em";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Alolo;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required for xyz benefits for you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required for xyz benefits for you";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Application needs to access photos library to save images suggest boarding pass, promotion.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
