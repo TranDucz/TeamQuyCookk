@@ -83,6 +83,7 @@
 			children = (
 				9944D7CA2ADA435F00CCA7A1 /* ImageDetailVC.swift */,
 				9944D7CB2ADA435F00CCA7A1 /* ImageDetailVC.xib */,
+				9944D7C42ADA3BCF00CCA7A1 /* Cell */,
 				9944D7C12ADA373500CCA7A1 /* ZoomFramework */,
 			);
 			path = ImageDetailViewController;
@@ -92,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				9944D7C22ADA374B00CCA7A1 /* ScrollViewExtension.swift */,
-				9944D7C42ADA3BCF00CCA7A1 /* Cell */,
 			);
 			path = ZoomFramework;
 			sourceTree = "<group>";

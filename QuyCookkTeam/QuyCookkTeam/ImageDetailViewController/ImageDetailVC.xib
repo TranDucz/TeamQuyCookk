@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageDetailVC" customModule="QuyCookkTeam">
             <connections>
                 <outlet property="collectionView" destination="jkQ-cs-O9d" id="O1T-Kb-Krq"/>
+                <outlet property="smallImageCollectionView" destination="XgD-S1-V9y" id="nuL-83-7qt"/>
                 <outlet property="vContent" destination="VjR-NV-hs9" id="1cY-4B-qI3"/>
                 <outlet property="vSmallImageContainer" destination="mSK-Lm-ZZK" id="FTy-XG-acp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -45,9 +46,25 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSK-Lm-ZZK" userLabel="vSmallImage">
                     <rect key="frame" x="0.0" y="758" width="393" height="60"/>
-                    <color key="backgroundColor" systemColor="tintColor"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XgD-S1-V9y">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Cy7-RQ-Ve3">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="XgD-S1-V9y" secondAttribute="trailing" id="Gi2-yM-hX2"/>
+                        <constraint firstItem="XgD-S1-V9y" firstAttribute="leading" secondItem="mSK-Lm-ZZK" secondAttribute="leading" id="IUR-O4-CYn"/>
                         <constraint firstAttribute="height" constant="60" id="UxP-pR-EDV"/>
+                        <constraint firstAttribute="bottom" secondItem="XgD-S1-V9y" secondAttribute="bottom" id="hU9-Pt-9s3"/>
+                        <constraint firstItem="XgD-S1-V9y" firstAttribute="top" secondItem="mSK-Lm-ZZK" secondAttribute="top" id="jHb-sD-lE5"/>
                     </constraints>
                 </view>
             </subviews>
@@ -63,15 +80,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mSK-Lm-ZZK" secondAttribute="trailing" id="tTb-H4-KGR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="28" y="20"/>
+            <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
